@@ -21,7 +21,7 @@ int	main(void) {
 		}
 		else if (command == "SEARCH")
 			phonebook.searchInPhonebook();
-		else if (command == "EXIT")
+		else if (command == "EXIT" || std::cin.eof())
 			break;
 	}
 	return 0;
