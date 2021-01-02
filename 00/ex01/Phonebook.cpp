@@ -95,7 +95,6 @@ void Phonebook::searchInPhonebook()
 				}
 				else
 					std::cout << "There is no such index" << std::endl;
-				
 			}
 			else
 				std::cout << "Invalid input. Try Again\n";

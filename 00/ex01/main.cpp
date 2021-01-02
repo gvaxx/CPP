@@ -16,9 +16,7 @@ int	main(void) {
 		showHeader();
 		std::getline(std::cin, command);
 		if (command == "ADD")
-		{
 			phonebook.addContact();
-		}
 		else if (command == "SEARCH")
 			phonebook.searchInPhonebook();
 		else if (command == "EXIT" || std::cin.eof())
