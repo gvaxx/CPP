@@ -37,7 +37,7 @@ std::string Contact::getPostalAddress(void)
 
 std::string Contact::getEmailAddress(void)
 {
-	return (this->emailAdress);
+	return (this->emailAddress);
 }
 
 std::string Contact::getPhoneNumber(void)

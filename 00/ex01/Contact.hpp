@@ -3,7 +3,7 @@
 # include <iomanip>
 
 #ifndef CONTACT_HPP
-# define CONTAC_THPP
+# define CONTACT_HPP
 
 class	Contact
 {
@@ -39,7 +39,7 @@ class	Contact
 		std::string	nickname;
 		std::string	login;
 		std::string	postalAddress;
-		std::string	emailAdress;
+		std::string	emailAddress;
 		std::string	phoneNumber;
 		std::string	birthdayDate;
 		std::string	favoriteMeal;
