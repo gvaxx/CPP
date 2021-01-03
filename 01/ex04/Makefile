@@ -2,7 +2,7 @@ SHELL = /bin/sh
 
 CC = clang++
 RM = rm -rf
-FLAGS = -Wall
+FLAGS = --std=c++98 -Wall -Wextra -Werror
 
 NAME = ex04
 SRC = ex04.cpp

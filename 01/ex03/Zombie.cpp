@@ -1,6 +1,14 @@
-//
-// Created by Morrec Captain on 1/2/21.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcaptain <mcaptain@msk-school21.ru>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/03 21:08:52 by mcaptain          #+#    #+#             */
+/*   Updated: 2021/01/03 21:22:50 by mcaptain         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "Zombie.hpp"
 
@@ -28,7 +36,7 @@ Zombie::~Zombie(void)
     return;
 }
 
-void Zombie::announce(void)
+void        Zombie::announce(void)
 {
     std::cout << "<" << this->_name << " " << this->_type << "> Braiiiiiiinnnssss..." << std::endl;
 }
@@ -43,12 +51,12 @@ std::string Zombie::getType(void)
     return this->_type;
 }
 
-void Zombie::setName(std::string name)
+void        Zombie::setName(std::string name)
 {
     this->_name = name;
 }
 
-void Zombie::setType(std::string type)
+void        Zombie::setType(std::string type)
 {
     this->_type = type;
 }

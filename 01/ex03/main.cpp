@@ -1,11 +1,20 @@
-//
-// Created by Morrec Captain on 1/2/21.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcaptain <mcaptain@msk-school21.ru>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/03 21:02:55 by mcaptain          #+#    #+#             */
+/*   Updated: 2021/01/03 21:27:05 by mcaptain         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ZombieHorde.hpp"
 
-int	main(void) {
-    ZombieHorde horde(15);
+int	main(void)
+{
+    ZombieHorde horde(10);
     horde.announce();
     return 0;
 }

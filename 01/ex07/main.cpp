@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcaptain <mcaptain@msk-school21.ru>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/03 23:56:14 by mcaptain          #+#    #+#             */
+/*   Updated: 2021/01/03 23:59:05 by mcaptain         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -6,12 +18,8 @@ int main(int argc, char const *argv[])
 {
 	if (argc == 4)
 	{
-		size_t		pos;
-		std::string	buffer;
 		std::string	s1 = argv[2];
 		std::string	s2 = argv[3];
-		std::string	fileName = argv[1];
-		std::string	replaceFile = fileName + ".replace";
 
 		if(!s1.length() || !s2.length())
 		{
@@ -19,6 +27,7 @@ int main(int argc, char const *argv[])
 			return 1;
 		}
 
+		std::string	fileName = argv[1];
 		std::ifstream	in(argv[1]);
 		if (!in || in.fail())
 		{
@@ -26,12 +35,17 @@ int main(int argc, char const *argv[])
 			return 1;
 		}
 
+		std::string	replaceFile = fileName + ".replace";
 		std::ofstream	out(replaceFile);
 		if (!out || out.fail())
 		{
 			std::cerr << "Could not open " << replaceFile << "\n";
 			return 1;
 		}
+
+		size_t		pos;
+		std::string	buffer;
+
 		size_t len = s1.length();
 		while (std::getline(in, buffer))
 		{

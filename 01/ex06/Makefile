@@ -2,7 +2,7 @@ SHELL = /bin/sh
 
 CC = clang++
 RM = rm -rf
-FLAGS = -Wall
+FLAGS = --std=c++98 -Wall -Wextra -Werror
 
 NAME = human
 SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp

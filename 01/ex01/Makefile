@@ -2,7 +2,7 @@ SHELL = /bin/sh
 
 CC = clang++
 RM = rm -rf
-FLAGS = -Wall -Wextra -Werror
+FLAGS = --std=c++98 -Wall -Wextra -Werror
 
 NAME = plumb
 SRC = ex01.cpp

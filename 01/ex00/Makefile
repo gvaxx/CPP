@@ -2,7 +2,7 @@ SHELL = /bin/sh
 
 CC = clang++
 RM = rm -rf
-FLAGS = -Wall -Wextra
+FLAGS = --std=c++98 -Wall -Wextra -Werror
 
 NAME = pony
 SRC = main.cpp Pony.cpp

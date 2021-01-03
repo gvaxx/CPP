@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcaptain <mcaptain@msk-school21.ru>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/06 06:53:37 by jaleman           #+#    #+#             */
-/*   Updated: 2021/01/03 15:17:55 by mcaptain         ###   ########.fr       */
+/*   Created: 2021/01/03 23:47:25 by mcaptain          #+#    #+#             */
+/*   Updated: 2021/01/03 23:55:44 by mcaptain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef HUMANB_HPP
 # define HUMANB_HPP

@@ -2,7 +2,7 @@ SHELL = /bin/sh
 
 CC = clang++
 RM = rm -rf
-FLAGS = -Wall
+FLAGS = --std=c++98 -Wall -Wextra -Werror
 
 NAME = brain
 SRC = main.cpp Brain.cpp Human.cpp

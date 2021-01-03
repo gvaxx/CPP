@@ -1,9 +1,16 @@
-//
-// Created by Morrec Captain on 1/2/21.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ZombieEvent.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mcaptain <mcaptain@msk-school21.ru>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/03 20:59:05 by mcaptain          #+#    #+#             */
+/*   Updated: 2021/01/03 21:00:28 by mcaptain         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ZombieEvent.hpp"
-
 
 ZombieEvent::ZombieEvent(void)
 {
@@ -16,7 +23,7 @@ ZombieEvent::~ZombieEvent(void)
     return;
 }
 
-void ZombieEvent::setZombieType(std::string type)
+void    ZombieEvent::setZombieType(std::string type)
 {
     this->_type = type;
 }
