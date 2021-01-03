@@ -16,8 +16,11 @@ class ZombieHorde {
                 ZombieHorde(int numbers);
                 ~ZombieHorde(void);
         Zombie  *newRandomZombie(void);
+        void    announce(void);
+
     private:
         Zombie  *horde;
+        int     horde_size;
 };
 
 

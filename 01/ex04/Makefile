@@ -4,8 +4,8 @@ CC = clang++
 RM = rm -rf
 FLAGS = -Wall
 
-NAME = zombieHorde
-SRC = main.cpp Zombie.cpp ZombieHorde.cpp
+NAME = ex04
+SRC = ex04.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

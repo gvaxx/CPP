@@ -20,23 +20,28 @@ std::string type_array[] = {
         "coal"
 };
 
-Zombie *ZombieHorde::newRandomZombie()
-{
-    return new Zombie(name_array[rand() % 5], type_array[rand() % 4]);
-}
-
 ZombieHorde::ZombieHorde(int numbers)
 {
     if(numbers < 0)
         throw std::invalid_argument("numbers must be positive");
     else
     {
-        this->horde = new Zombie[numbers];
+        this->horde_size = numbers;
+        this->horde = new Zombie[this->horde_size];
 
-        for (int i = 0; i < numbers; i++)
-            this->horde[i] = this->newRandomZombie();
+        for (int i = 0; i < this->horde_size; i++)
+        {
+            this->horde[i].setName(name_array[rand() % 5]);
+            this->horde[i].setType(type_array[rand() % 4]);
+        }
     }
     return;
+}
+
+void ZombieHorde::announce(void)
+{
+    for (int i = 0; i < this->horde_size; i++)
+        this->horde[i].announce();
 }
 
 ZombieHorde::~ZombieHorde(void)

@@ -13,6 +13,15 @@ Zombie::Zombie(std::string name, std::string type)
     return;
 }
 
+Zombie::Zombie()
+{
+    this->_name = "default";
+
+    this->_type = "default";
+    std::cout << "Zombie " << this->_name  << " type of " << this->_type << " was \"born\"" << std::endl ;
+    return ;
+}
+
 Zombie::~Zombie(void)
 {
     std::cout << "Zombie " << this->_name << " type of " << this->_type << " really dead" << std::endl;
@@ -34,3 +43,12 @@ std::string Zombie::getType(void)
     return this->_type;
 }
 
+void Zombie::setName(std::string name)
+{
+    this->_name = name;
+}
+
+void Zombie::setType(std::string type)
+{
+    this->_type = type;
+}
