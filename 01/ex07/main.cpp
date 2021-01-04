@@ -6,7 +6,7 @@
 /*   By: mcaptain <mcaptain@msk-school21.ru>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/03 23:56:14 by mcaptain          #+#    #+#             */
-/*   Updated: 2021/01/03 23:59:05 by mcaptain         ###   ########.fr       */
+/*   Updated: 2021/01/04 14:04:34 by mcaptain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,5 @@ int main(int argc, char const *argv[])
 	{
 		std::cout << "you should enter: \n./replace file_name search_string replace_string\n";
 	}
+	return 0;
 }

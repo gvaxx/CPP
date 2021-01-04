@@ -4,7 +4,7 @@ CC = clang++
 RM = rm -rf
 FLAGS = --std=c++98 -Wall -Wextra -Werror
 
-NAME = human
+NAME = replace
 SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
