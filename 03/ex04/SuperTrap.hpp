@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   SuperTrap.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcaptain <mcaptain@msk-school21.ru>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/05 15:24:50 by mcaptain          #+#    #+#             */
-/*   Updated: 2021/01/05 15:24:51 by mcaptain         ###   ########.fr       */
+/*   Created: 2021/01/06 17:16:50 by mcaptain          #+#    #+#             */
+/*   Updated: 2021/01/06 17:16:51 by mcaptain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#ifndef SUPERTRAP_HPP
+# define SUPERTRAP_HPP
 
 # include <iostream>
 # include <string>
+# include "FragTrap.hpp"
+# include "NinjaTrap.hpp"
 
-class Fixed
+class SuperTrap : public FragTrap, public NinjaTrap
 {
-public:
+	public:
 
-						Fixed();
-						Fixed( Fixed const & src );
-						~Fixed();
+		SuperTrap();
+		SuperTrap( SuperTrap const & src );
+		~SuperTrap();
+		SuperTrap( std::string name );
 
-	Fixed &				operator=( Fixed const & rhs );
-	int					getRawBits( void ) const;
-	void				setRawBits( int const raw );
-	float				toFloat( void ) const;
-	int					toInt( void ) const;
-private:
-	int					fix_value;
-	static const int	frac_bits = 8;
+		void			rangedAttack(std::string const & target);
+		void			meleeAttack(std::string const & target);
+
+		SuperTrap &		operator=( SuperTrap const & rhs );
+
 };
 
 #endif
