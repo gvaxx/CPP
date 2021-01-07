@@ -4,10 +4,9 @@
 
 # include <iostream>
 # include <string>
-# include AWeapon.hpp
+# include "AWeapon.hpp"
 
 class PlasmaRifle :public AWeapon {
-    std::string _output_of_attack;
 public:
     PlasmaRifle();
 
@@ -15,12 +14,12 @@ public:
 
     PlasmaRifle &operator=(PlasmaRifle const &rhs);
 
-    PlasmaRifle::PlasmaRifle(std::string _output_of_attack, std::string const & name, int apcost, int damage);
-
     ~PlasmaRifle();
+    void    attack() const;
+
 };
 
-std::ostream &operator<<(std::ostream &o, Fool const &i);
+std::ostream &operator<<(std::ostream &o, PlasmaRifle const &i);
 
 
 #endif //CPP_PLASMARIFLE_HPP

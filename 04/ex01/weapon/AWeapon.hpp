@@ -8,8 +8,8 @@
 class AWeapon {
 protected:
     std::string _name;
-    std::string _apcost;
-    std::string _damage;
+    int _apcost;
+    int _damage;
 public:
     AWeapon();
     AWeapon(AWeapon const &src);
@@ -23,7 +23,7 @@ public:
     virtual void    attack() const = 0;
 };
 
-std::ostream &operator<<(std::ostream &o, Fool const &i);
+std::ostream &operator<<(std::ostream &o, AWeapon const &i);
 
 
-#endif /
+#endif 
