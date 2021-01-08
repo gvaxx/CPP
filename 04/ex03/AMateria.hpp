@@ -7,7 +7,6 @@
 
 class AMateria
 {
-
 	public:
 		AMateria();
 		AMateria( AMateria const & src );
@@ -20,7 +19,7 @@ class AMateria
 		virtual void		use(ICharacter& target);
 
 		AMateria &			operator=( AMateria const & rhs );
-	private:
+	protected:
 		unsigned int		_xp;
 		std::string			_type;
 };
