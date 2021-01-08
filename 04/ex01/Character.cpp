@@ -21,11 +21,6 @@ Character::~Character()
 
 Character &				Character::operator=( Character const & rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-
 	this->_ap = rhs._ap;
 	this->_name = rhs._name;
 	this->_weapon = rhs._weapon;

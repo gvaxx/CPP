@@ -6,7 +6,7 @@
 /*   By: mcaptain <mcaptain@msk-school21.ru>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/03 21:02:55 by mcaptain          #+#    #+#             */
-/*   Updated: 2021/01/06 17:09:57 by mcaptain         ###   ########.fr       */
+/*   Updated: 2021/01/08 16:27:01 by mcaptain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 int	main(void)
 {
+	srand(time(NULL));
 
     FragTrap ourFTrap("Jorge");
     ourFTrap.rangedAttack("little wolf");

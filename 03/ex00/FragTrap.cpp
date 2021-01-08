@@ -6,7 +6,7 @@
 /*   By: mcaptain <mcaptain@msk-school21.ru>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 16:58:06 by mcaptain          #+#    #+#             */
-/*   Updated: 2021/01/06 17:02:05 by mcaptain         ###   ########.fr       */
+/*   Updated: 2021/01/08 16:20:42 by mcaptain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void FragTrap::takeDamage(unsigned int amount)
 	if (amount - this->_armourDamageReductionPoints >= this->_hitPoints)
 		this->_hitPoints = 0;
 	else
-		this->_hitPoints = this->_hitPoints = amount - this->_armourDamageReductionPoints;
+		this->_hitPoints = this->_hitPoints - (amount - this->_armourDamageReductionPoints);
 	std::cout << "Holy gears! " << this->_name << " take " << amount - this->_armourDamageReductionPoints << " point of damage. His hp now is " << this->_hitPoints << " points!" << std::endl;
 }
 

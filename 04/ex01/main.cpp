@@ -6,7 +6,7 @@
 /*   By: mcaptain <mcaptain@msk-school21.ru>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/03 21:02:55 by mcaptain          #+#    #+#             */
-/*   Updated: 2021/01/08 00:31:20 by mcaptain         ###   ########.fr       */
+/*   Updated: 2021/01/08 12:05:27 by mcaptain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,34 @@ int main()
     Enemy* b = new RadScorpion();
     AWeapon* pr = new PlasmaRifle();
     AWeapon* pf = new PowerFist();
-    me->equip(pr);std::cout << *me;
-    me->equip(pf);me->attack(b);
-    std::cout << *me;me->equip(pr);
-    std::cout << *me;me->attack(b);
-    std::cout << *me;me->attack(b);
+    me->equip(pr);
     std::cout << *me;
-return 0;}
+    me->equip(pf);
+    me->attack(b);
+    std::cout << *me;
+    me->equip(pr);
+    std::cout << *me;
+    me->attack(b);
+    std::cout << *me;
+    me->attack(b);
+    std::cout << *me;
+
+    std::cout << "*----------------------------------------------------*" << std::endl;
+    Enemy *a = new SuperMutant();
+    me->attack(a);
+    me->attack(a);
+    me->attack(a);
+    me->attack(a);
+    std::cout << *me;
+    me->recoverAP();
+    me->recoverAP();
+    me->recoverAP();
+    me->equip(pf);
+    std::cout << *me;
+    me->attack(a);
+    me->attack(a);
+    me->attack(a);
+    std::cout << *me;
+
+    return 0;
+}

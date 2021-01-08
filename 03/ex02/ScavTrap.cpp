@@ -6,7 +6,7 @@
 /*   By: mcaptain <mcaptain@msk-school21.ru>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 17:10:12 by mcaptain          #+#    #+#             */
-/*   Updated: 2021/01/06 17:10:15 by mcaptain         ###   ########.fr       */
+/*   Updated: 2021/01/08 16:33:03 by mcaptain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ ScavTrap::ScavTrap( const ScavTrap & src )
 
 ScavTrap::~ScavTrap()
 {
+	std::cout << this->_name << " say: I'm really dead."<< std::endl;
 }
 
 ScavTrap &				ScavTrap::operator=( ScavTrap const & rhs )
