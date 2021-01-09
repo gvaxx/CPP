@@ -6,7 +6,31 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b3eb103-3a22-43f1-bcf8-aabc3e503eae" name="Default Changelist" comment="" />
+    <list default="true" id="4b3eb103-3a22-43f1-bcf8-aabc3e503eae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex00/Fool.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex00/Fool.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex01/Character.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex01/Character.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex01/enemy/Enemy.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex01/enemy/Enemy.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex01/enemy/RadScorpion.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex01/enemy/RadScorpion.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex01/enemy/SuperMutant.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex01/enemy/SuperMutant.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex01/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex01/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex01/weapon/AWeapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex01/weapon/AWeapon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex01/weapon/AWeapon.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex01/weapon/AWeapon.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex01/weapon/PlasmaRifle.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex01/weapon/PlasmaRifle.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex01/weapon/PowerFist.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex01/weapon/PowerFist.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex02/Squad.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex02/Squad.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex02/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex02/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex03/AMateria.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex03/AMateria.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex03/AMateria.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex03/AMateria.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex03/Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex03/Character.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex03/Cure.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex03/Cure.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex03/ICharacter.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex03/ICharacter.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex03/Ice.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex03/Ice.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex03/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex03/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex03/MateriaSource.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex03/MateriaSource.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04/ex03/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/04/ex03/main.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,23 +62,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/04/ex00" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/intra-uuid-9577bc05-69b1-414a-8f9f-206e735c60bb-3421539" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/intra-uuid-9577bc05-69b1-414a-8f9f-206e735c60bb-3421539" />
       <recent name="$PROJECT_DIR$/04/ex00" />
       <recent name="$PROJECT_DIR$/01" />
       <recent name="$PROJECT_DIR$/01/ex02" />
       <recent name="$PROJECT_DIR$/01/ex01" />
-      <recent name="$PROJECT_DIR$/01/ex00" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>

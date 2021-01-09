@@ -5,7 +5,7 @@ RM = rm -rf
 FLAGS = --std=c++98 -Wall -Wextra -Werror
 
 NAME = squad
-SRC = main.cpp Ice.cpp Cure.cpp MakeSource.cpp Character.cpp AMateria.cpp
+SRC =  AMateria.cpp Character.cpp Ice.cpp Cure.cpp MateriaSource.cpp   main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

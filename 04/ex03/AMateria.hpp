@@ -3,6 +3,8 @@
 
 # include <iostream>
 # include <string>
+class ICharacter;
+
 # include "ICharacter.hpp"
 
 class AMateria
@@ -19,9 +21,12 @@ class AMateria
 		virtual void		use(ICharacter& target);
 
 		AMateria &			operator=( AMateria const & rhs );
-	protected:
-		unsigned int		_xp;
-		std::string			_type;
+	private:
+        unsigned int		_xp;
+    protected:
+        std::string			_type;
+        void                setXP(int xp);
+
 };
 
 #endif

@@ -21,6 +21,4 @@ class SuperMutant: public Enemy
 
 };
 
-std::ostream &			operator<<( std::ostream & o, SuperMutant const & i );
-
 #endif /* ***************************************************** SUPERMUTANT_H */

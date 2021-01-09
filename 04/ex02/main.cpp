@@ -18,10 +18,9 @@ int main()
 		cur->rangedAttack();
 		cur->meleeAttack();
 	}
-	delete vlc;
 
 	std::cout << "*-------------------------------------*" << std::endl;
-
+	delete vlc;
 	Squad squad;
 
 	for (int i = 0; i < 10; i++)
@@ -48,6 +47,20 @@ int main()
 	std::cout << squad.getCount() << " -> " << squad.push(squad.getUnit(10)) << std::endl;
 	std::cout << squad.getCount() << " -> " << squad.push(squad.getUnit(42)) << std::endl;
 	std::cout << squad.getUnit(-1) << " " << squad.getUnit(10000) << std::endl;
+    std::cout << "*---------Clone----------*" << std::endl;
 
+    Squad copy;
+    copy.push(new TacticalMarine);
+    copy = Squad(squad);
+    copy.push(new TacticalMarine);
+    std::cout << copy.getCount() << std::endl;
+    std::cout << squad.getCount() << std::endl;
+
+    Squad *copy2 = new Squad(squad);
+    copy2->push(new TacticalMarine);
+    std::cout << copy2->getCount() << std::endl;
+    std::cout << squad.getCount() << std::endl;
+
+    delete copy2;
 	return 0;
 }

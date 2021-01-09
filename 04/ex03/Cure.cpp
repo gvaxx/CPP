@@ -4,14 +4,14 @@ Cure::Cure(): AMateria("cure") {}
 
 Cure::Cure( const Cure & src ): AMateria("cure")
 {
-	this->_xp = src._xp;
+    AMateria::setXP(src.getXP());
 }
 
 Cure::~Cure(){}
 
 Cure &		Cure::operator=( Cure const & rhs )
 {
-	this->_xp = rhs._xp;
+    AMateria::setXP(rhs.getXP());
 	return *this;
 }
 

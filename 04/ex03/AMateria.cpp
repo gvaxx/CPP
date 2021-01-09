@@ -10,7 +10,7 @@ AMateria::AMateria( const AMateria & src )
 	this->_xp = src._xp;
 }
 
-AMateria::AMateria(std::string const & type): _type(type), _xp(0){}
+AMateria::AMateria(std::string const & type):_xp(0), _type(type){}
 
 AMateria::~AMateria()
 {}
@@ -30,6 +30,11 @@ std::string const &	AMateria::getType() const
 unsigned int		AMateria::getXP() const
 {
 	return this->_xp;
+}
+
+void                AMateria::setXP(int xp)
+{
+    this->_xp = xp;
 }
 
 void AMateria::use(ICharacter &target)

@@ -12,8 +12,6 @@ Fool::Fool( const Fool & src )
 
 Fool::Fool(std::string name ):Victim(name)
 {
-    this->_name = name;
-
     std::cout << "Honk honk." << std::endl;
 }
 

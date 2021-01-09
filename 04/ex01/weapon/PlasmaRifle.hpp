@@ -19,7 +19,4 @@ public:
 
 };
 
-std::ostream &operator<<(std::ostream &o, PlasmaRifle const &i);
-
-
 #endif //CPP_PLASMARIFLE_HPP

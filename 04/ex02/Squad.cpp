@@ -7,7 +7,8 @@ Squad::Squad(): _count(0), _units(nullptr)
 Squad::Squad( const Squad & src ): _count(0), _units(nullptr)
 {
 	for(int i = 0; i < src.getCount(); i++)
-		this->push(this->getUnit(i)->clone());
+	    if(src.getUnit(i))
+            this->push(src.getUnit(i)->clone());
 }
 
 Squad::~Squad()
@@ -22,7 +23,7 @@ int				Squad::getCount() const
 
 ISpaceMarine*	Squad::getUnit(int index) const
 {
-	if(index > this->_count - 1 || index < 0)
+    if(index > this->_count - 1 || index < 0)
 	{
 		return nullptr;
 	}
@@ -50,10 +51,11 @@ int				Squad::push(ISpaceMarine* unit)
 
 Squad &				Squad::operator=( Squad const & rhs )
 {
-	this->_count = 0;
+    this->_killUnits();
+    this->_count = 0;
 	this->_units = nullptr;
 	for(int i = 0; i < rhs.getCount(); i++)
-		this->push(this->getUnit(i)->clone());
+		this->push(rhs.getUnit(i)->clone());
 	return *this;
 }
 

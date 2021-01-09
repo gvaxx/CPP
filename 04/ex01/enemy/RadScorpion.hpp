@@ -20,6 +20,4 @@ class RadScorpion: public Enemy
 
 };
 
-std::ostream &			operator<<( std::ostream & o, RadScorpion const & i );
-
 #endif /* ***************************************************** RADSCORPION_H */

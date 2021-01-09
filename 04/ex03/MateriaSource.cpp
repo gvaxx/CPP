@@ -7,8 +7,8 @@ MateriaSource::MateriaSource(): _countMateria(0)
 MateriaSource::MateriaSource( const MateriaSource & src )
 {
 	this->_countMateria = 0;
-	for(int i = 0; i < this->_countMateria; i++)
-		this->learnMateria(src._allMateria[i]);
+	for(int i = 0; i < src._countMateria; i++)
+        this->learnMateria(src._allMateria[i]->clone());
 }
 
 
@@ -22,16 +22,16 @@ MateriaSource &				MateriaSource::operator=( MateriaSource const & rhs )
 	this->_deleteMateria();
 
 	this->_countMateria = 0;
-	for(int i = 0; i < this->_countMateria; i++)
-		this->learnMateria(rhs._allMateria[i]);
+	for(int i = 0; i < rhs._countMateria; i++)
+        this->learnMateria(rhs._allMateria[i]->clone());
 
 	return *this;
 }
 
 void				MateriaSource::learnMateria(AMateria* materia)
 {
-	if (this->_countMateria == 4)
-		return;
+    if(!materia || this->_countMateria == 4 || this->_findMateria(materia->getType()) != -1)
+        return ;
 	this->_allMateria[this->_countMateria] = materia->clone();
 	this->_countMateria += 1;
 }
@@ -39,7 +39,7 @@ void				MateriaSource::learnMateria(AMateria* materia)
 AMateria*			MateriaSource::createMateria(std::string const & type)
 {
 	int index = this->_findMateria(type);
-	if(index < 0)
+	if (index < 0)
 		return 0;
 	return this->_allMateria[index]->clone();
 }
@@ -53,6 +53,7 @@ int				MateriaSource::_findMateria(std::string const & type)
 	}
 	return -1;
 }
+
 void			MateriaSource::_deleteMateria()
 {
 	for(int i = 0; i < this->_countMateria; i++)

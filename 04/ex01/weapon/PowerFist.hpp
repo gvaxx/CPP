@@ -19,7 +19,4 @@ public:
 
 };
 
-std::ostream &operator<<(std::ostream &o, PowerFist const &i);
-
-
 #endif //CPP_POWERFIST_HPP

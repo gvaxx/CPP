@@ -22,6 +22,4 @@ class Enemy
 		virtual void		takeDamage(int);
 };
 
-std::ostream &			operator<<( std::ostream & o, Enemy const & i );
-
 #endif 

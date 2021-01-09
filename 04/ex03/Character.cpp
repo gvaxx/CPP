@@ -11,10 +11,11 @@ Character::Character(Character const &src):
 	_name(src._name), _count(0)
 {
 	for (int i = 0; i < src._count; i++)
-		this->equip(src._materia[i]->clone());
+        if(src._materia[i])
+		    this->equip(src._materia[i]->clone());
 
 	for (int i = this->_count; i < 4; i++)
-		this->_materia[i] = nullptr;
+    		this->_materia[i] = nullptr;
 }
 
 Character::~Character()
@@ -30,7 +31,7 @@ Character &Character::operator=(Character const &rhs)
 	this->_count = 0;
 
 	for (int i = 0; i < rhs._count; i++)
-		this->equip(rhs._materia[i]->clone());
+        this->equip(rhs._materia[i]->clone());
 
 	for (int i = this->_count; i < 4; i++)
 		this->_materia[i] = nullptr;
@@ -44,7 +45,7 @@ std::string const &Character::getName(void) const
 
 void Character::equip(AMateria *m)
 {
-	if (this->_count == 4 || m == nullptr)
+	if (this->_count == 4 || !m)
 		return ;
 
 	for (int i = 0; i < this->_count; i++)
@@ -57,19 +58,22 @@ void Character::equip(AMateria *m)
 
 void Character::unequip(int idx)
 {
-	if (idx < 0 || idx >= this->_count || this->_materia[idx] == nullptr)
+	if (idx < 0 || idx >= this->_count || !this->_materia[idx])
 		return ;
-	for (int i = idx; i < 3; i++)
-	{
-		this->_materia[i] = this->_materia[i + 1];
-		this->_materia[i + 1] = nullptr;
-	}
+	if(idx == this->_count - 1)
+        this->_materia[idx] = nullptr;
+    else
+	    for (int i = idx; i < this->_count - 1; i++)
+        {
+            this->_materia[i] = this->_materia[i + 1];
+            this->_materia[i + 1] = nullptr;
+        }
 	this->_count--;
 }
 
 void Character::use(int idx, ICharacter &target)
 {
-	if (idx < 0 || idx >= this->_count || this->_materia[idx] == nullptr)
+	if (idx < 0 || idx >= this->_count || !this->_materia[idx])
 		return ;
 	this->_materia[idx]->use(target);
 }
@@ -77,5 +81,5 @@ void Character::use(int idx, ICharacter &target)
 void	Character::_deleteMateria()
 {
 	for (int i = 0; i < this->_count; i++)
-		delete this->_materia[i];
+        delete this->_materia[i];
 }

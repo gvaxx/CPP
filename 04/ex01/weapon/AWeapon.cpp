@@ -15,9 +15,7 @@ AWeapon::AWeapon(std::string const & name, int apcost, int damage)
 {
 }
 
-AWeapon::~AWeapon()
-{
-}
+AWeapon::~AWeapon(){}
 
 AWeapon &AWeapon::operator=(const AWeapon &src)
 {

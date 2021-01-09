@@ -18,7 +18,7 @@ class Character
 		Character( Character const & src );
 		Character(std::string const & name);
 
-		virtual ~Character();
+		~Character();
 		
 		void		recoverAP();
 		void		equip(AWeapon*);

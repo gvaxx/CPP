@@ -54,5 +54,8 @@ int main()
     me->attack(a);
     std::cout << *me;
 
+    delete me;
+    delete pr;
+    delete pf;
     return 0;
 }

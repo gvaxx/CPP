@@ -15,15 +15,13 @@ public:
     AWeapon(AWeapon const &src);
     AWeapon &operator=(AWeapon const &rhs);
     AWeapon(std::string const & name, int apcost, int damage);
-    ~AWeapon();
+    virtual ~AWeapon();
 
     std::string     getName() const;
     int             getAPCost() const;
     int             getDamage() const;
     virtual void    attack() const = 0;
 };
-
-std::ostream &operator<<(std::ostream &o, AWeapon const &i);
 
 
 #endif 
