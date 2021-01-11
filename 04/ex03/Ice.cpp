@@ -17,6 +17,8 @@ Ice &		Ice::operator=( Ice const & rhs )
 
 AMateria*	Ice::clone() const
 {
+	std::cout << "clone Ice" << std::endl;
+
 	return (new Ice(*this));
 }
 

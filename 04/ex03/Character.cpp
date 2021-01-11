@@ -4,7 +4,7 @@ Character::Character(std::string const &name):
 	_name(name), _count(0)
 {
 	for (int i = 0; i < 4; i++)
-		this->_materia[i] = nullptr;
+		this->_materia[i] = NULL;
 }
 
 Character::Character(Character const &src):
@@ -15,7 +15,7 @@ Character::Character(Character const &src):
 		    this->equip(src._materia[i]->clone());
 
 	for (int i = this->_count; i < 4; i++)
-    		this->_materia[i] = nullptr;
+    		this->_materia[i] = NULL;
 }
 
 Character::~Character()
@@ -34,7 +34,7 @@ Character &Character::operator=(Character const &rhs)
         this->equip(rhs._materia[i]->clone());
 
 	for (int i = this->_count; i < 4; i++)
-		this->_materia[i] = nullptr;
+		this->_materia[i] = NULL;
 	return (*this);
 }
 
@@ -61,12 +61,12 @@ void Character::unequip(int idx)
 	if (idx < 0 || idx >= this->_count || !this->_materia[idx])
 		return ;
 	if(idx == this->_count - 1)
-        this->_materia[idx] = nullptr;
+        this->_materia[idx] = NULL;
     else
 	    for (int i = idx; i < this->_count - 1; i++)
         {
             this->_materia[i] = this->_materia[i + 1];
-            this->_materia[i + 1] = nullptr;
+            this->_materia[i + 1] = NULL;
         }
 	this->_count--;
 }

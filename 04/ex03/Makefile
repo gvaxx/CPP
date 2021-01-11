@@ -4,7 +4,7 @@ CC = clang++
 RM = rm -rf
 FLAGS = --std=c++98 -Wall -Wextra -Werror
 
-NAME = squad
+NAME = character
 SRC =  AMateria.cpp Character.cpp Ice.cpp Cure.cpp MateriaSource.cpp   main.cpp
 OBJ = $(SRC:.cpp=.o)
 
