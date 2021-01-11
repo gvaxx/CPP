@@ -15,10 +15,7 @@ void SuperMutant::takeDamage(int damage)
 	Enemy::takeDamage(damage - 3);
 }
 
-SuperMutant::SuperMutant( SuperMutant const & src ): Enemy(80, "SuperMutant")
-{
-    (void)src;
-}
+SuperMutant::SuperMutant( SuperMutant const & src ): Enemy(src.getHP(), src.getType()){}
 
 SuperMutant &		SuperMutant::operator=( SuperMutant const & rhs )
 {

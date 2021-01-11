@@ -7,7 +7,16 @@ AWeapon::AWeapon(std::string const & name, int apcost, int damage)
 
 AWeapon::~AWeapon(){}
 
-std::string     AWeapon::getName() const
+AWeapon::AWeapon(AWeapon const &src): _name(src._name), _apcost(src._apcost), _damage(src._damage)
+{
+
+}
+
+AWeapon & AWeapon::operator=(AWeapon const &rhs)
+{
+
+}
+        std::string     AWeapon::getName() const
 {
     return this->_name;
 }
