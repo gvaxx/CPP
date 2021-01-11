@@ -6,8 +6,8 @@
 
 class Enemy
 {
-		int			_hp;
-		std::string	_type;
+		unsigned int        _hp;
+		std::string         _type;
 		Enemy();
 		Enemy( Enemy const & src );
 		Enemy &		operator=( Enemy const & rhs );
@@ -15,10 +15,12 @@ class Enemy
 	public:
 		virtual ~Enemy();
 
-		Enemy(int hp, std::string const & type);
+		Enemy(unsigned int hp, std::string const & type);
 		std::string virtual	getType() const;
 		int					getHP() const;
 		virtual void		takeDamage(int);
+        void                setHP(unsigned int hp);
+        void                setType(std::string type);
 };
 
 #endif 

@@ -4,10 +4,9 @@ Enemy::Enemy()
 {
 }
 
-
 Enemy::~Enemy(){}
 
-Enemy::Enemy(int hp, std::string const & type): _hp(hp), _type(type){}
+Enemy::Enemy(unsigned int hp, std::string const & type): _hp(hp), _type(type){}
 
 Enemy::Enemy( const Enemy & src )
 {
@@ -30,6 +29,16 @@ std::string		Enemy::getType() const
 int				Enemy::getHP() const
 {
 	return this->_hp;
+}
+
+void		    Enemy::setType(std::string type)
+{
+    this->_type = type;
+}
+
+void            Enemy::setHP(unsigned int hp)
+{
+    this->_hp = hp;
 }
 
 void			Enemy::takeDamage(int damage)

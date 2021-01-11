@@ -14,3 +14,15 @@ void SuperMutant::takeDamage(int damage)
 {
 	Enemy::takeDamage(damage - 3);
 }
+
+SuperMutant::SuperMutant( SuperMutant const & src ): Enemy(80, "SuperMutant")
+{
+    (void)src;
+}
+
+SuperMutant &		SuperMutant::operator=( SuperMutant const & rhs )
+{
+    this->setHP(rhs.getHP());
+    this->setType(rhs.getType());
+    return *this;
+}

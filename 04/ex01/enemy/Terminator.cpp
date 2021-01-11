@@ -14,3 +14,15 @@ void Terminator::takeDamage(int damage)
 {
 	Enemy::takeDamage(damage - 10);
 }
+
+Terminator::Terminator( Terminator const & src ): Enemy(80, "Terminator")
+{
+    (void)src;
+}
+
+Terminator &		Terminator::operator=( Terminator const & rhs )
+{
+    this->setHP(rhs.getHP());
+    this->setType(rhs.getType());
+    return *this;
+}
