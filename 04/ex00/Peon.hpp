@@ -12,7 +12,7 @@ class Peon: public Victim
 
 		Peon();
 		Peon( Peon const & src );
-		~Peon();
+		virtual ~Peon();
         Peon(std::string name );
 
     Peon &		operator=( Peon const & rhs );

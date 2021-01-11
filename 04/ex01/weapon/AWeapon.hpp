@@ -6,15 +6,15 @@
 # include <string>
 
 class AWeapon {
-protected:
+private:
+    AWeapon(AWeapon const &src);
+    AWeapon &operator=(AWeapon const &rhs);
+
     std::string _name;
     int _apcost;
     int _damage;
 public:
-    AWeapon();
-    AWeapon(AWeapon const &src);
-    AWeapon &operator=(AWeapon const &rhs);
-    AWeapon(std::string const & name, int apcost, int damage);
+    AWeapon();AWeapon(std::string const & name, int apcost, int damage);
     virtual ~AWeapon();
 
     std::string     getName() const;

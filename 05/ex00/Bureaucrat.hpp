@@ -7,19 +7,30 @@
 
 class Bureaucrat
 {
-    std::string     _grade;
-    unsigned int    _name;
+    unsigned int    _grade;
+    std::string    _name;
+
 public:
     Bureaucrat();
     Bureaucrat(Bureaucrat const &src);
     Bureaucrat &operator=(Bureaucrat const &rhs);
-    Bureaucrat(std::string value);
+    Bureaucrat(std::string name, int grade);
     ~Bureaucrat();
-    GradeTooHighException();
-    GradeTooLowException();
+
+	class GradeTooHighException: public std::exception {
+		virtual const char* what() const throw();
+	};
+	class GradeTooLowException: public std::exception {
+		virtual const char* what() const throw();
+	};
+
+    std::string     getName(void) const;
+    unsigned int    getGrade(void) const;
+    void            incrementGrade();
+    void            decrementGrade();
 };
 
-std::ostream &operator<<(std::ostream &o, Fool const &i);
+std::ostream &operator<<(std::ostream &o, Bureaucrat const &i);
 
 
 #endif //CPP_BUREAUCRAT_HPP

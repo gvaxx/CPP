@@ -6,13 +6,11 @@
 
 class Victim
 {
-
-	public:
-
 		Victim();
-        Victim(std::string name);
+	public:
+		Victim(std::string name);
 		Victim( Victim const & src );
-		~Victim();
+		virtual ~Victim();
 
 		Victim &        operator=( Victim const & rhs );
         virtual void    getPolymorphed(void) const;

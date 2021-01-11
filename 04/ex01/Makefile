@@ -10,8 +10,10 @@ SRC = main.cpp Character.cpp	\
 	weapon/AWeapon.cpp			\
 	weapon/PlasmaRifle.cpp \
 	weapon/PowerFist.cpp \
+	weapon/ChainSaw.cpp \
 	enemy/Enemy.cpp \
 	enemy/RadScorpion.cpp \
+	enemy/Terminator.cpp \
 	enemy/SuperMutant.cpp 
 
 all: $(NAME)

@@ -12,7 +12,7 @@ class Fool : public Victim
 
 		Fool();
 		Fool( Fool const & src );
-		~Fool();
+		virtual ~Fool();
         Fool(std::string name );
 
 		Fool &		operator=( Fool const & rhs );

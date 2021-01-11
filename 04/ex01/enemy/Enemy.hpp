@@ -6,17 +6,16 @@
 
 class Enemy
 {
-	protected:
 		int			_hp;
 		std::string	_type;
-
-	public:
 		Enemy();
 		Enemy( Enemy const & src );
+		Enemy &		operator=( Enemy const & rhs );
+
+	public:
 		virtual ~Enemy();
 
 		Enemy(int hp, std::string const & type);
-		Enemy &		operator=( Enemy const & rhs );
 		std::string virtual	getType() const;
 		int					getHP() const;
 		virtual void		takeDamage(int);

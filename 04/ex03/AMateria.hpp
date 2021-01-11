@@ -19,14 +19,12 @@ class AMateria
 		unsigned int		getXP() const;
 		virtual AMateria*	clone() const = 0;
 		virtual void		use(ICharacter& target);
+		void				setXP(int xp);
 
 		AMateria &			operator=( AMateria const & rhs );
 	private:
-        unsigned int		_xp;
-    protected:
-        std::string			_type;
-        void                setXP(int xp);
-
+		unsigned int		_xp;
+		std::string			_type;
 };
 
 #endif

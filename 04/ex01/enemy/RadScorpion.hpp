@@ -7,17 +7,13 @@
 
 class RadScorpion: public Enemy
 {
+	RadScorpion &		operator=( RadScorpion const & rhs );
+	RadScorpion( RadScorpion const & src );
 
 	public:
 
 		RadScorpion();
-		RadScorpion( RadScorpion const & src );
-		~RadScorpion();
-
-		RadScorpion &		operator=( RadScorpion const & rhs );
-
-	private:
-
+		virtual ~RadScorpion();
 };
 
 #endif /* ***************************************************** RADSCORPION_H */
