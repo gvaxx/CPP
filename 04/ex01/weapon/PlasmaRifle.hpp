@@ -7,11 +7,11 @@
 # include "AWeapon.hpp"
 
 class PlasmaRifle :public AWeapon {
-    PlasmaRifle(PlasmaRifle const &src);
-    PlasmaRifle &operator=(PlasmaRifle const &rhs);
 
 public:
     PlasmaRifle();
+    PlasmaRifle(PlasmaRifle const &src);
+    PlasmaRifle &operator=(PlasmaRifle const &rhs);
 
     virtual ~PlasmaRifle();
     void    attack() const;

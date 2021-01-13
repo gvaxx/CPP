@@ -1,7 +1,5 @@
 #include"Form.hpp"
 
-Form::Form(){}
-
 Form::Form(const Form &src):
     _name(src._name),
     _sign(false),
@@ -27,19 +25,16 @@ Form::Form(std::string name, int gradeToSign, int gradeToExecute) :
 
 Form::~Form() {}
 
-Form &Form::operator=(const Form &src) {
-
-    this->_gradeToExecute = src._gradeToExecute;
-    this->_gradeToSigned = src._gradeToSigned;
+Form &Form::operator=(const Form &src)
+{
     this->_sign = src._sign;
-    this->_name = src._name;
 
     return *this;
 }
 
 std::ostream &operator<<(std::ostream &o, Form const &i)
 {
-    o << i.getName() << " form have" << std::endl <<\
+    o << i.getName() << " have" << std::endl <<\
     "execute grade = " << i.getGradeToExecute() << std::endl <<\
     "sign grade = " << i.getGradeToSigned() << std::endl <<\
     "signed = " << (i.getSigned() ? "true" : "false") << std::endl;
@@ -47,20 +42,27 @@ std::ostream &operator<<(std::ostream &o, Form const &i)
     return (o);
 }
 
-const char* Form::GradeTooHighException::what() const throw()
+const char*     Form::GradeTooHighException::what() const throw()
 {
 	return "FormException: Grade too High";
 }
 
-const char* Form::GradeTooLowException::what() const throw()
+const char*     Form::GradeTooLowException::what() const throw()
 {
 	return "FormException: Grade too Low";
 }
 
-std::string     Form::getName(void) const {return this->_name;}
-unsigned int    Form::getGradeToExecute(void) const {return this->_gradeToExecute;}
-unsigned int    Form::getGradeToSigned(void) const {return this->_gradeToSigned;}
-bool            Form::getSigned(void) const {return this->_sign;}
+std::string     Form::getName(void) const
+{return this->_name;}
+
+unsigned int    Form::getGradeToExecute(void) const
+{return this->_gradeToExecute;}
+
+unsigned int    Form::getGradeToSigned(void) const
+{return this->_gradeToSigned;}
+
+bool            Form::getSigned(void) const
+{return this->_sign;}
 
 void            Form::beSigned(Bureaucrat &bureaucrat)
 {

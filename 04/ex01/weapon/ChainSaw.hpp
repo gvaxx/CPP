@@ -7,11 +7,12 @@
 # include "AWeapon.hpp"
 
 class ChainSaw :public AWeapon {
-    ChainSaw(ChainSaw const &src);
-    ChainSaw &operator=(ChainSaw const &rhs);
 
 public:
     ChainSaw();
+
+    ChainSaw(ChainSaw const &src);
+    ChainSaw &operator=(ChainSaw const &rhs);
 
     virtual ~ChainSaw();
     void    attack() const;

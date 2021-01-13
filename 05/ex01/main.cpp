@@ -2,49 +2,42 @@
 
 int main(void)
 {
-	Bureaucrat francis("Francis", 100);
-	std::cout << francis;
+	Bureaucrat Burmental("Burmental", 50);
+	std::cout << Burmental;
 
-	Form form1("Taxes", 100, 50);
+	Form form1("Form-A1", 100, 50);
 	std::cout << form1;
-	form1.beSigned(francis);
+	form1.beSigned(Burmental);
 	std::cout << form1;
 
-	std::cout << "---" << std::endl;
-
-	Form form2("NDA", 99, 50);
+	Form form2("Application", 49, 50);
 	std::cout << form2;
 	try
 	{
-		francis.signForm(form2);
+		Burmental.signForm(form2);
 	}
 	catch(std::exception const &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
-	std::cout << form2 ;
+	std::cout << form2;
 
-	std::cout << "---" << std::endl;
-
-	Form form3("Other Paper", 101, 50);
+	Form form3("Garbage", 51, 50);
 	std::cout << form3;
-	francis.signForm(form3);
+	Burmental.signForm(form3);
 	std::cout << form3;
 	try
 	{
-		francis.signForm(form3);
+		Burmental.signForm(form3);
 	}
 	catch(std::exception const &e)
 	{
 		std::cerr << e.what();
 	}
-	std::cout << form3;
-
-	std::cout << "---" << std::endl;
 
 	try
 	{
-		Form formException("Important Form", 1000, 50);
+		Form formException("My paper", 152, 50);
 		std::cout << formException;
 	}
 	catch(std::exception const &e)
@@ -52,11 +45,9 @@ int main(void)
 		std::cerr << e.what() << std::endl;
 	}
 
-	std::cout << "---" << std::endl;
-
 	try
 	{
-		Form formException("Important Form", 0, 50);
+		Form formException("My paper", -10, 50);
 		std::cout << formException;
 	}
 	catch(std::exception const &e)
@@ -64,11 +55,9 @@ int main(void)
 		std::cerr << e.what() << std::endl;
 	}
 
-	std::cout << "---" << std::endl;
-
 	try
 	{
-		Form formException("Important Form", 100, 1000);
+		Form formException("My paper", 100, -152);
 		std::cout << formException;
 	}
 	catch(std::exception const &e)
@@ -76,11 +65,9 @@ int main(void)
 		std::cerr << e.what() << std::endl;
 	}
 
-	std::cout << "---" << std::endl;
-
 	try
 	{
-		Form formException("Important Form", 100, 0);
+		Form formException("My paper", 100, -10);
 		std::cout << formException;
 	}
 	catch(std::exception const &e)

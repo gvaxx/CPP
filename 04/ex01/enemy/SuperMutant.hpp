@@ -7,15 +7,14 @@
 
 class SuperMutant: public Enemy
 {
-		SuperMutant &	operator=( SuperMutant const & rhs );
-		SuperMutant( SuperMutant const & src );
 
 	public:
 		SuperMutant();
+		SuperMutant &	operator=( SuperMutant const & rhs );
+		SuperMutant( SuperMutant const & src );
 		virtual ~SuperMutant();
 
 		void			takeDamage(int damage);
-
 };
 
-#endif /* ***************************************************** SUPERMUTANT_H */
+#endif

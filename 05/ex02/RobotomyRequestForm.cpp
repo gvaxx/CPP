@@ -19,7 +19,8 @@ RobotomyRequestForm &				RobotomyRequestForm::operator=( RobotomyRequestForm con
 	return *this;
 }
 
-std::string	RobotomyRequestForm::getTarget() const {return this->_target;}
+std::string	RobotomyRequestForm::getTarget() const 
+{return this->_target;}
 
 void RobotomyRequestForm::execute(Bureaucrat &bureaucrat) const
 {

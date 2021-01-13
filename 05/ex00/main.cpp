@@ -2,19 +2,19 @@
 
 int main(void)
 {
-	Bureaucrat francis("Francis", 100);
-	std::cout << francis;
-	francis.incrementGrade();
-	std::cout << francis;
-	francis.decrementGrade();
-	std::cout << francis ;
+	Bureaucrat Letual("Letual", 100);
+	std::cout << Letual;
+	Letual.incrementGrade();
+	std::cout << Letual;
+	Letual.decrementGrade();
+	std::cout << Letual ;
 
 	std::cout << "_____________try create with exceeding\n";
 
 	try
 	{
-		Bureaucrat jack("Jack", 0);
-		std::cout << jack;
+		Bureaucrat Burmental("Burmental", 0);
+		std::cout << Burmental;
 	}
 	catch(std::exception const &e)
 	{
@@ -23,8 +23,8 @@ int main(void)
 
 	try
 	{
-		Bureaucrat jack("Jack", 1000);
-		std::cout << jack;
+		Bureaucrat Burmental("Burmental", 1000);
+		std::cout << Burmental;
 	}
 	catch(std::exception const &e)
 	{
@@ -33,12 +33,12 @@ int main(void)
 	std::cout << "_____________try increment and decrement\n";
 	try
 	{
-		Bureaucrat jack("Jack", 2);
-		std::cout << jack;
-		jack.incrementGrade();
-		std::cout << jack;
-		jack.incrementGrade();
-		std::cout << jack;
+		Bureaucrat Burmental("Burmental", 2);
+		std::cout << Burmental;
+		Burmental.incrementGrade();
+		std::cout << Burmental;
+		Burmental.incrementGrade();
+		std::cout << Burmental;
 
 	}
 	catch(std::exception const &e)
@@ -48,12 +48,12 @@ int main(void)
 
 	try
 	{
-		Bureaucrat jack("Jack", 149);
-		std::cout << jack;
-		jack.decrementGrade();
-		std::cout << jack;
-		jack.decrementGrade();
-		std::cout << jack;
+		Bureaucrat Burmental("Burmental", 149);
+		std::cout << Burmental;
+		Burmental.decrementGrade();
+		std::cout << Burmental;
+		Burmental.decrementGrade();
+		std::cout << Burmental;
 	}
 	catch(std::exception const &e)
 	{

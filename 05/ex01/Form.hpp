@@ -9,10 +9,10 @@ class Bureaucrat;
 
 class Form
 {
-    std::string     _name;
-    bool            _sign;
-    unsigned int    _gradeToSigned;
-    unsigned int    _gradeToExecute;
+    std::string         _name;
+    bool                _sign;
+    unsigned int const  _gradeToSigned;
+    unsigned int const  _gradeToExecute;
     Form();
 
 public:
@@ -34,7 +34,6 @@ public:
     bool            getSigned(void) const;
 
     void            beSigned(Bureaucrat &bureaucrat);
-    virtual void    execute(Bureaucrat const &bureaucrat) const = 0;
 };
 
 std::ostream &operator<<(std::ostream &o, Form const &i);

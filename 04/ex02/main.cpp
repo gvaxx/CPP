@@ -11,6 +11,8 @@ int main()
 	Squad* vlc = new Squad;
 	vlc->push(bob);
 	vlc->push(jim);
+	vlc->push(jim);
+	vlc->push(jim);
 	for (int i = 0; i < vlc->getCount(); ++i)
 	{
 		ISpaceMarine* cur = vlc->getUnit(i);
@@ -42,7 +44,7 @@ int main()
 			squad.getUnit(i)->meleeAttack();
 	}
 
-	std::cout << squad.getCount() << " -> " << squad.push(nullptr) << std::endl;
+	std::cout << squad.getCount() << " -> " << squad.push(NULL) << std::endl;
 	std::cout << squad.getCount() << " -> " << squad.push(squad.getUnit(10 - 1)) << std::endl;
 	std::cout << squad.getCount() << " -> " << squad.push(squad.getUnit(10)) << std::endl;
 	std::cout << squad.getCount() << " -> " << squad.push(squad.getUnit(42)) << std::endl;
@@ -51,7 +53,7 @@ int main()
 
     Squad copy;
     copy.push(new TacticalMarine);
-    copy = Squad(squad);
+    copy = squad;
     copy.push(new TacticalMarine);
     std::cout << copy.getCount() << std::endl;
     std::cout << squad.getCount() << std::endl;

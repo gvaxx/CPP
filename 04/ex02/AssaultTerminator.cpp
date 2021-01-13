@@ -17,6 +17,8 @@ AssaultTerminator::~AssaultTerminator()
 
 ISpaceMarine*		AssaultTerminator::clone() const
 {
+	std::cout << "clone terminator" << std::endl;
+
 	return (new AssaultTerminator(*this));
 }
 

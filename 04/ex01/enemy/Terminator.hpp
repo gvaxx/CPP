@@ -7,11 +7,11 @@
 
 class Terminator: public Enemy
 {
+	public:
+		Terminator();
 		Terminator( Terminator const & src );
 		Terminator &	operator=( Terminator const & rhs );
 
-	public:
-		Terminator();
 		virtual ~Terminator();
 
 		void			takeDamage(int damage);

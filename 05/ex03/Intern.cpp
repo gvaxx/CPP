@@ -7,9 +7,6 @@ Intern::_formsName[3] = {
     "shrubbery creation"
 };
 
-	Form* (Intern::*_formsMaker[3])(std::string) = {
-
-	};
 Intern::Intern(){
 	this->_formsMaker[0] = &Intern::makeShruberyCreationForm;
 	this->_formsMaker[1] = &Intern::makeRobotomyRequestForm;
@@ -39,9 +36,14 @@ std::ostream &			operator<<( std::ostream & o, Intern const & i )
 	return o;
 }
 
-Form* Intern::makeShruberyCreationForm(std::string target) {return new ShrubberyCreationForm(target);}
-Form* Intern::makeRobotomyRequestForm(std::string target){return new RobotomyRequestForm(target);}
-Form* Intern::makePresidentalPardonForm(std::string target){return new PresidentialPardonForm(target);}
+Form* Intern::makeShruberyCreationForm(std::string target)
+{return new ShrubberyCreationForm(target);}
+
+Form* Intern::makeRobotomyRequestForm(std::string target)
+{return new RobotomyRequestForm(target);}
+
+Form* Intern::makePresidentalPardonForm(std::string target)
+{return new PresidentialPardonForm(target);}
 
 Form* Intern::makeForm(std::string formType, std::string target)
 {

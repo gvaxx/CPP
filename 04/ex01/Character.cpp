@@ -11,13 +11,10 @@ Character::Character( const Character & src )
 	this->_weapon = src._weapon;
 }
 
-Character::Character( std::string const &name ) : _name(name), _ap(40), _weapon(nullptr)
-{
-}
+Character::Character( std::string const &name ) : _name(name), _ap(40), _weapon(NULL)
+{}
 
-Character::~Character()
-{
-}
+Character::~Character(){}
 
 Character &				Character::operator=( Character const & rhs )
 {
@@ -71,7 +68,7 @@ void Character::attack(Enemy* enemy)
 {
 	if (enemy
 		&& this->_weapon
-		&& this->_weapon->getAPCost() <= this->_ap)
+		&& this->_ap - this->_weapon->getAPCost() >= 0)
 	{
 		this->_ap -= this->_weapon->getAPCost();
 		enemy->takeDamage(this->_weapon->getDamage());

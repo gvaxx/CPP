@@ -7,15 +7,15 @@
 # include "AWeapon.hpp"
 
 class PowerFist :public AWeapon {
-    PowerFist(PowerFist const &src);
-    PowerFist &operator=(PowerFist const &rhs);
 
 public:
     PowerFist();
+    PowerFist(PowerFist const &src);
+    PowerFist &operator=(PowerFist const &rhs);
 
     virtual ~PowerFist();
     void    attack() const;
 
 };
 
-#endif //CPP_POWERFIST_HPP
+#endif

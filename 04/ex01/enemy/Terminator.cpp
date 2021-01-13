@@ -2,7 +2,7 @@
 
 Terminator::Terminator():Enemy(200, "Terminator")
 {
-	std::cout << "Gaaah. Me want smash heads!" << std::endl;
+	std::cout << "Where is Sahra Konor?" << std::endl;
 }
 
 Terminator::~Terminator()
@@ -15,7 +15,8 @@ void Terminator::takeDamage(int damage)
 	Enemy::takeDamage(damage - 10);
 }
 
-Terminator::Terminator( Terminator const & src ): Enemy(src.getHP(), src.getType()){}
+Terminator::Terminator( Terminator const & src )
+: Enemy(src.getHP(), src.getType()){}
 
 Terminator &		Terminator::operator=( Terminator const & rhs )
 {

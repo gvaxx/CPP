@@ -12,9 +12,9 @@ class Character
 		std::string	_name;
 		int			_ap;
 		AWeapon 	*_weapon;
+		Character();
 
 	public:
-		Character();
 		Character( Character const & src );
 		Character(std::string const & name);
 

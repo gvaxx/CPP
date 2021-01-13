@@ -17,6 +17,8 @@ TacticalMarine::~TacticalMarine()
 
 ISpaceMarine*		TacticalMarine::clone() const
 {
+	std::cout << "clone marine" << std::endl;
+
 	return (new TacticalMarine(*this));
 }
 

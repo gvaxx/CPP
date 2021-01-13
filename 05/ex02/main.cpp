@@ -7,63 +7,57 @@ int main(void)
 {
 	srand(time(NULL));
 
-	Bureaucrat supervisor("Supervisor", 1);
-	// std::cout << supervisor << std::endl;
-	Bureaucrat francis("Francis", 25);
-	// std::cout << francis << std::endl;
+	Bureaucrat Boss("Boss", 1);
+	std::cout << Boss << std::endl;
+	Bureaucrat Burmental("Burmental", 25);
+	std::cout << Burmental << std::endl;
 
-	Form *shrub = new ShrubberyCreationForm("home");
+	Form *shrub = new ShrubberyCreationForm("Earth");
 	std::cout << *shrub << std::endl;
-	shrub->beSigned(supervisor);
-	shrub->execute(francis);
+	shrub->beSigned(Boss);
+	shrub->execute(Burmental);
 	std::cout << *shrub << std::endl;
 
-	Form *pres = new PresidentialPardonForm("Francis");
+	Form *pres = new PresidentialPardonForm("Burmental");
 	std::cout << *pres << std::endl;
-	supervisor.signForm(*pres);
-	pres->execute(supervisor);
+	Boss.signForm(*pres);
+	pres->execute(Boss);
 
 	Form *robot = new RobotomyRequestForm("Bender");
 	std::cout << *robot << std::endl;
 
-	francis.executeForm(*robot);
-	robot->beSigned(supervisor);
-	francis.executeForm(*robot);
-	francis.executeForm(*robot);
-
-	std::cout << "---" << std::endl;
+	Burmental.executeForm(*robot);
+	robot->beSigned(Boss);
+	Burmental.executeForm(*robot);
+	Burmental.executeForm(*robot);
 
 	try
 	{
-		francis.executeForm(*pres);
+		Burmental.executeForm(*pres);
 	}
 	catch(std::exception const &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
 
-	std::cout << "---" << std::endl;
-
 	try
 	{
-		PresidentialPardonForm pres = PresidentialPardonForm("Francis");
+		PresidentialPardonForm pres = PresidentialPardonForm("Burmental");
 		std::cout << pres << std::endl;
-		supervisor.signForm(pres);
-		pres.execute(francis);
+		Boss.signForm(pres);
+		pres.execute(Burmental);
 	}
 	catch(std::exception const &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
 
-	std::cout << "---" << std::endl;
-
 	try
 	{
-		PresidentialPardonForm pres = PresidentialPardonForm("Francis");
+		PresidentialPardonForm pres = PresidentialPardonForm("Burmental");
 		std::cout << pres << std::endl;
-		supervisor.signForm(pres);
-		francis.executeForm(pres);
+		Boss.signForm(pres);
+		Burmental.executeForm(pres);
 	}
 	catch(std::exception const &e)
 	{

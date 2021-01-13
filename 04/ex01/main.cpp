@@ -6,7 +6,7 @@
 /*   By: mcaptain <mcaptain@msk-school21.ru>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/03 21:02:55 by mcaptain          #+#    #+#             */
-/*   Updated: 2021/01/10 13:28:19 by mcaptain         ###   ########.fr       */
+/*   Updated: 2021/01/12 00:58:07 by mcaptain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,14 +60,27 @@ int main()
 
     std::cout << "*-------------------My classes-----------------------*" << std::endl;
     Enemy *c = new Terminator();
-    me->attack(a);
+    me->attack(c);
     me->equip(cs);
     me->recoverAP();
+    me->recoverAP();
+    me->recoverAP();
+    me->recoverAP();
+    me->recoverAP();
 
-    me->attack(a);
+    me->attack(c);
+    me->attack(c);
+    me->attack(c);
+    me->attack(c);
+    me->attack(c);
+    me->attack(c);
+    me->attack(c);
+    me->attack(c);
     std::cout << *me;
+    me->attack(c);
 
-    delete c;
+    delete a;
+    delete b;
     delete cs;
     delete me;
     delete pr;
