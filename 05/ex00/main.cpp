@@ -39,7 +39,6 @@ int main(void)
 		std::cout << Burmental;
 		Burmental.incrementGrade();
 		std::cout << Burmental;
-
 	}
 	catch(std::exception const &e)
 	{

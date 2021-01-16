@@ -9,7 +9,7 @@ class Bureaucrat;
 
 class Form
 {
-    std::string         _name;
+    std::string const   _name;
     bool                _sign;
     unsigned int const  _gradeToSigned;
     unsigned int const  _gradeToExecute;

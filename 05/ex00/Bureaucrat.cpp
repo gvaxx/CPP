@@ -20,7 +20,6 @@ Bureaucrat::~Bureaucrat() {
 
 Bureaucrat      &Bureaucrat::operator=(const Bureaucrat &src) {
     this->_grade = src._grade;
-    this->_name = src._name;
     return *this;
 }
 
@@ -47,19 +46,13 @@ unsigned int    Bureaucrat::getGrade(void) const {return this->_grade;}
 void            Bureaucrat::incrementGrade()
 {
     if (this->_grade == 1)
-    {
         throw Bureaucrat::GradeTooHighException();
-        return;
-    }
     this->_grade -= 1;
 }
 
 void            Bureaucrat::decrementGrade()
 {
     if (this->_grade == 150)
-    {
         throw Bureaucrat::GradeTooLowException();
-        return;
-    }
     this->_grade += 1;
 }

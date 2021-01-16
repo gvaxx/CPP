@@ -1,11 +1,8 @@
 #include"Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() {
-}
+Bureaucrat::Bureaucrat() {}
 
-Bureaucrat::Bureaucrat(const Bureaucrat &src): _grade(src._grade), _name(src._name)
-{
-}
+Bureaucrat::Bureaucrat(const Bureaucrat &src): _grade(src._grade), _name(src._name){}
 
 Bureaucrat::Bureaucrat(std::string name, int grade): _grade(grade), _name(name)
 {
@@ -13,17 +10,13 @@ Bureaucrat::Bureaucrat(std::string name, int grade): _grade(grade), _name(name)
         throw Bureaucrat::GradeTooLowException();
     if(grade < 1)
         throw Bureaucrat::GradeTooHighException();
-
-    this->_grade = grade;
-    this->_name = name;
 }
 
-Bureaucrat::~Bureaucrat() {
-}
+Bureaucrat::~Bureaucrat() {}
 
-Bureaucrat &Bureaucrat::operator=(const Bureaucrat &src) {
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &src)
+{
     this->_grade = src._grade;
-    this->_name = src._name;
     return *this;
 }
 
@@ -51,20 +44,14 @@ unsigned int    Bureaucrat::getGrade(void) const {return this->_grade;}
 void            Bureaucrat::incrementGrade()
 {
     if (this->_grade == 1)
-    {
         throw Bureaucrat::GradeTooHighException();
-        return;
-    }
     this->_grade -= 1;
 }
 
 void            Bureaucrat::decrementGrade()
 {
     if (this->_grade == 150)
-    {
         throw Bureaucrat::GradeTooLowException();
-        return;
-    }
     this->_grade += 1;
 }
 

@@ -2,9 +2,9 @@
 	
 std::string
 Intern::_formsName[3] = {
-    "presidential pardon",
+    "shrubbery creation",
     "robotomy request",
-    "shrubbery creation"
+    "presidential pardon"
 };
 
 Intern::Intern(){
@@ -13,7 +13,8 @@ Intern::Intern(){
 	this->_formsMaker[2] = &Intern::makePresidentalPardonForm;
 }
 
-Intern::Intern( const Intern & src ){
+Intern::Intern( const Intern & src )
+{
 	(void)src;
 
 	this->_formsMaker[0] = &Intern::makeShruberyCreationForm;

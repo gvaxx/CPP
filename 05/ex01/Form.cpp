@@ -12,11 +12,11 @@ Form::Form(std::string name, int gradeToSign, int gradeToExecute) :
     _gradeToSigned(gradeToSign),
     _gradeToExecute(gradeToExecute)
 {
-    if (this->_gradeToSigned < 1 || this->_gradeToExecute < 1)
+    if (gradeToSign < 1 || gradeToExecute < 1)
     {
         throw Form::GradeTooHighException();
     }
-    else if (this->_gradeToSigned > 150 || this->_gradeToExecute > 150)
+    else if (gradeToSign> 150 || gradeToExecute > 150)
     {
         throw Form::GradeTooLowException();
     }
@@ -25,8 +25,8 @@ Form::Form(std::string name, int gradeToSign, int gradeToExecute) :
 
 Form::~Form() {}
 
-Form &Form::operator=(const Form &src) {
-
+Form &Form::operator=(const Form &src)
+{
     this->_sign = src._sign;
 
     return *this;

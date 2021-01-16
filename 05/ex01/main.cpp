@@ -47,7 +47,7 @@ int main(void)
 
 	try
 	{
-		Form formException("My paper", -10, 50);
+		Form formException("My paper", 152, 50);
 		std::cout << formException;
 	}
 	catch(std::exception const &e)
@@ -67,7 +67,7 @@ int main(void)
 
 	try
 	{
-		Form formException("My paper", 100, -10);
+		Form formException("My paper", -100, 10);
 		std::cout << formException;
 	}
 	catch(std::exception const &e)

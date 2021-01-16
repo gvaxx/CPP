@@ -18,13 +18,16 @@ int main(void)
     f2 = i1.makeForm("presidential pardon", "Elvis");
     f3 = i1.makeForm("shrubbery creation", "Elvis");
     f4 = i1.makeForm("for naving nice day", "Elvis");
-    std::cout << *f1 << std::endl;
-    std::cout << *f2 << std::endl;
-    std::cout << *f3 << std::endl;
+    std::cout << *f1;
+    std::cout << *f2;
+    std::cout << *f3;
 
     b1.signForm(*f1);
     b1.executeForm(*f1);
 
+    delete f1;
+    delete f2;
+    delete f3;
 
     return (0);
 }

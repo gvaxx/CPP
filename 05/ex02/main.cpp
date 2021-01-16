@@ -43,7 +43,7 @@ int main(void)
 	try
 	{
 		PresidentialPardonForm pres = PresidentialPardonForm("Burmental");
-		std::cout << pres << std::endl;
+		std::cout << pres;
 		Boss.signForm(pres);
 		pres.execute(Burmental);
 	}
@@ -55,7 +55,7 @@ int main(void)
 	try
 	{
 		PresidentialPardonForm pres = PresidentialPardonForm("Burmental");
-		std::cout << pres << std::endl;
+		std::cout << pres;
 		Boss.signForm(pres);
 		Burmental.executeForm(pres);
 	}
