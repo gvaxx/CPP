@@ -4,8 +4,8 @@ CC = clang++
 RM = rm -rf
 FLAGS = --std=c++98 -Wall -Wextra -Werror
 
-NAME = convert
-SRC = main.cpp
+NAME = serialize
+SRC = main.cpp Data.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
